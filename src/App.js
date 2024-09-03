@@ -22,7 +22,13 @@ const App = () => {
 
   console.log(friendData);
 
-  return <div className="App"></div>;
+  return ( 
+    <div className="App">
+      {friendData.map((friend, id) => (
+        <Friend key={id} friend={friend} />
+      ))}
+    </div>
+  );
 };
 
 export default App;
